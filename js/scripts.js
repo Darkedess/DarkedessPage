@@ -145,3 +145,4 @@ window.addEventListener('DOMContentLoaded', () => {
   aplicarEstilosVillano(); // ← si tienes esto para cambiar textos u otros estilos
   activarBrilloTron();      // ← si tienes efectos como el brillo en secciones
 });
+
