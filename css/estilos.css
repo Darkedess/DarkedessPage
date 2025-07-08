@@ -1456,3 +1456,35 @@ body.villain-mode .form-label {
   }
 }
 
+/* Animación pulso de explosion */
+@keyframes pulso-tron {
+  0% {
+    box-shadow: 0 0 0px rgba(0, 255, 255, 0.7);
+  }
+  50% {
+    box-shadow: 0 0 25px rgba(0, 255, 255, 1);
+  }
+  100% {
+    box-shadow: 0 0 0px rgba(0, 255, 255, 0.7);
+  }
+}
+
+@keyframes pulso-villano {
+  0% {
+    box-shadow: 0 0 0px rgba(255, 0, 60, 0.7);
+  }
+  50% {
+    box-shadow: 0 0 25px rgba(255, 0, 60, 1);
+  }
+  100% {
+    box-shadow: 0 0 0px rgba(255, 0, 60, 0.7);
+  }
+}
+
+.alert-pulso-tron {
+  animation: pulso-tron 1s ease-out;
+}
+
+.alert-pulso-villano {
+  animation: pulso-villano 1s ease-out;
+}

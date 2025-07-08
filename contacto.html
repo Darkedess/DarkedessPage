@@ -99,7 +99,7 @@
     </div>
   </div>
 
-  <script>
+ <script>
 function mostrarAlerta() {
   const alerta = document.getElementById("alertaTron");
   const spinner = document.getElementById("spinnerTron");
@@ -109,14 +109,16 @@ function mostrarAlerta() {
   // Mostrar spinner
   spinner.classList.remove("d-none");
 
-  // Aplicar color según el tema
-  spinnerIcon.classList.remove("text-info", "text-danger");
+  // Limpiar clases previas
+  alerta.classList.remove("d-none", "alert-info", "alert-danger", "alert-pulso-tron", "alert-pulso-villano");
+
+  // Aplicar color y mensaje según el tema
   if (body.classList.contains("villain-mode")) {
-    alerta.classList.add("alert-danger");
-      alerta.innerText = "Tu mensaje fue infiltrado con éxito. El sistema será hackeado.";
+    alerta.classList.add("alert-danger", "alert-pulso-villano");
+    alerta.innerText = "Tu mensaje fue infiltrado con éxito. El sistema será hackeado.";
   } else {
-    alerta.classList.add("alert-info");
-      alerta.innerText = "¡Mensaje enviado correctamente al sistema Tron!";
+    alerta.classList.add("alert-info", "alert-pulso-tron");
+    alerta.innerText = "¡Mensaje enviado correctamente al sistema Tron!";
   }
 
   // Simular carga y mostrar alerta
@@ -130,8 +132,8 @@ function mostrarAlerta() {
     }, 3000);
   }, 1500); // Duración del spinner (1.5 segundos)
 }
-
 </script>
+
 
   
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
