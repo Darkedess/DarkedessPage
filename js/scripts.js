@@ -115,12 +115,15 @@ function toggleMode() {
 
   if (body.classList.contains("villain-mode")) {
     body.classList.remove("villain-mode");
-    body.classList.add("tron-mode"); // <-- ACTIVAR MODO TRON
+    body.classList.add("tron-mode");
+    localStorage.setItem('theme', 'tron');
   } else {
     body.classList.remove("tron-mode");
     body.classList.add("villain-mode");
+    localStorage.setItem('theme', 'villain');
   }
 }
+
 
 window.addEventListener("scroll", function () {
   const capsula = document.getElementById("capsulaInfo");
@@ -131,37 +134,14 @@ window.addEventListener("scroll", function () {
   }
 });
 
-
-  const datosCapsula = [
-    "¿Sabías que Tron fue una de las primeras películas en usar CGI a gran escala?",
-    "El personaje de Tron fue interpretado por Bruce Boxleitner, quien también hizo la voz en Tron: Uprising.",
-    "La moto de luz es uno de los íconos visuales más reconocidos de la cultura sci-fi.",
-    "En la película original, los efectos especiales fueron tan innovadores que fueron ignorados por los Oscar.",
-    "La banda sonora de Tron: Legacy fue compuesta por el dúo electrónico Daft Punk."
-  ];
-
-  let capsula = document.getElementById('capsulaInfo');
-  let texto = document.getElementById('textoCapsula');
-  let indiceActual = 0;
-  let tiempoColapso = 7000; // 7 segundos
-
-  // Colapsa automáticamente
-  function autoColapsar() {
-    setTimeout(() => {
-      capsula.classList.add('capsula-colapsada');
-    }, tiempoColapso);
+window.addEventListener('DOMContentLoaded', () => {
+  const theme = localStorage.getItem('theme');
+  if (theme === 'villain') {
+    document.body.classList.add('villain-mode');
+  } else {
+    document.body.classList.add('tron-mode');
   }
 
-  // Mostrar siguiente mensaje al hacer clic
-  function mostrarSiguienteDato() {
-    capsula.classList.remove('capsula-colapsada');
-    indiceActual = (indiceActual + 1) % datosCapsula.length;
-    texto.textContent = datosCapsula[indiceActual];
-    autoColapsar();
-  }
-
-  // Inicia con el primero y se colapsa solo
-  window.addEventListener('DOMContentLoaded', () => {
-    autoColapsar();
-  });
-
+  aplicarEstilosVillano(); // ← si tienes esto para cambiar textos u otros estilos
+  activarBrilloTron();      // ← si tienes efectos como el brillo en secciones
+});
