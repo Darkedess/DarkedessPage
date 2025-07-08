@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Noticias | Universo Tron</title>
+  <link rel="icon" href="imagenes\thumb-1920-489259.jpg" type="image/x-icon">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron&display=swap" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet">
+  <link rel="stylesheet" href="css/estilos.css">
+</head>
+<body>
+    <div class="bg-animation"></div>
+    <!-- Barra de navegación -->
+  <nav class="navbar fixed-top navbar-expand-lg navbar-dark bg-black border-bottom border-info">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="index.html"><i class="bi bi-lightning"></i> Universo Tron</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto">
+  <li class="nav-item"><a class="nav-link" href="index.html">Inicio</a></li>
+  <li class="nav-item"><a class="nav-link" href="noticias.html">Noticias</a></li>
+  <li class="nav-item"><a class="nav-link" href="enlaces.html">Enlaces</a></li>
+  <li class="nav-item"><a class="nav-link" href="contacto.html">Contacto</a></li>
+  <li class="nav-item"><a class="nav-link" href="#" data-bs-toggle="modal" data-bs-target="#politicasModal">Políticas</a></li>
+  <li class="nav-item">
+  <button onclick="toggleMode()" class="btn btn-sm btn-outline-info ms-2" title="Alternar modo">
+    <i class="bi bi-lightning-fill"></i>
+  </button>
+</li>
+</ul>
+      </div>
+    </div>
+  </nav>
+  <div class="container py-5">
+    <h1 class="text-center neon-text mb-4">Noticias del Universo Tron</h1>
+    <div class="row">
+      <div class="col-md-4 mb-4">
+  <div class="card custom-card pulse-box tron-section">
+    <img src="imagenes\Tron2.jpg" class="card-img-top img-fluid" alt="Tron 1982">
+    <div class="card-body">
+      <h5 class="card-title">El legado de Tron (1982)</h5>
+      <p class="card-text">La película que inició la revolución del sci-fi digital y la estética neón en el cine.</p>
+      <button class="btn btn-tema" data-bs-toggle="modal" data-bs-target="#modalTron1982">
+  Leer más
+</button>
+    </div>
+  </div>
+</div>
+
+      <div class="col-md-4 mb-4">
+  <div class="card custom-card pulse-box tron-section">
+    <img src="imagenes\Evolution.jpg" class="card-img-top img-fluid" alt="Tron Evolution">
+    <div class="card-body">
+      <h5 class="card-title">Tron: Evolution – El juego</h5>
+      <p class="card-text">Explora la historia previa a Legacy en este juego lleno de acción y estética digital.</p>
+      <button class="btn btn-tema" data-bs-toggle="modal" data-bs-target="#modalTronEvolution">
+  Leer más
+</button>
+    </div>
+  </div>
+</div>
+
+      <div class="col-md-4 mb-4">
+  <div class="card custom-card pulse-box tron-section">
+    <img src="imagenes\10.jpg" class="card-img-top img-fluid" alt="Retro Fururismo">
+    <div class="card-body">
+      <h5 class="card-title">Cultura RetroFuturista</h5>
+      <p class="card-text">El impacto cultural de Tron en la moda, el diseño y los videojuegos modernos.</p>
+      <button class="btn btn-tema" data-bs-toggle="modal" data-bs-target="#modalRetroFuturismo">
+  Leer más
+</button>
+    </div>
+  </div>
+</div>
+
+<section class="container my-5 curiosidades-section">
+  <h2 class="text-center neon-text mb-4">Curiosidades del Universo Tron</h2>
+  <div class="row">
+    <div class="col-md-4 mb-4">
+      <div class="card curiosidad-card pulse-box">
+        <div class="card-body">
+          <h5 class="card-title">Primer uso masivo de CGI</h5>
+          <p class="card-text">
+            Tron (1982) fue una de las primeras películas en utilizar gráficos generados por computadora de forma extensa, marcando un hito en los efectos especiales.
+          </p>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-4 mb-4">
+      <div class="card curiosidad-card pulse-box">
+        <div class="card-body">
+          <h5 class="card-title">Inspiración Visual</h5>
+          <p class="card-text">
+            La estética de Tron ha influenciado desde videojuegos hasta conciertos en vivo, consolidando el estilo “retro-futurista” y neón digital.
+          </p>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-4 mb-4">
+      <div class="card curiosidad-card pulse-box">
+        <div class="card-body">
+          <h5 class="card-title">Cameos Tecnológicos</h5>
+          <p class="card-text">
+            En Tron: Legacy, hay referencias a Apple, UNIX y software real dentro del entorno digital, integrando tecnología real en el mundo ficticio.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="timeline-item">
+  <div class="timeline-dot"></div>
+  <div class="timeline-year">1982</div>
+  <div class="timeline-content">
+    <h5>Tron (Película original)</h5>
+    <p>Kevin Flynn entra al mundo digital y ayuda a Tron a derrotar al programa controlador MCP.</p>
+  </div>
+</div>
+    <div class="timeline-item">
+  <div class="timeline-dot"></div>
+  <div class="timeline-year">2010</div>
+  <div class="timeline-content">
+    <h5>Tron: Legacy</h5>
+    <p>Sam Flynn es arrastrado al mundo digital en busca de su padre, enfrentando a Clu en una nueva guerra por el sistema.</p>
+  </div>
+</div>
+    <div class="timeline-item">
+  <div class="timeline-dot"></div>
+  <div class="timeline-year">2012</div>
+  <div class="timeline-content">
+    <h5>Tron: Uprising (Serie animada)</h5>
+    <p>Beck, guiado por Tron, se convierte en símbolo de resistencia contra Clu antes de los eventos de Legacy.</p>
+  </div>
+</div>
+    <div class="timeline-item">
+  <div class="timeline-dot"></div>
+  <div class="timeline-year">2025</div>
+  <div class="timeline-content">
+    <h5>Tron: Ares (Próximamente)</h5>
+    <p>Se espera que explore el conflicto entre el mundo real y el digital, llevando la saga a un nuevo nivel.</p>
+  </div>
+</div>
+
+<section class="tron-quotes my-5 py-5 text-center">
+  <h2 class="neon-text mb-4">Frases Icónicas</h2>
+
+  <blockquote class="quote-box">
+    <p class="quote-text">"I fight for the users."</p>
+    <footer class="quote-author">– Tron, 1982</footer>
+  </blockquote>
+
+  <blockquote class="quote-box">
+    <p class="quote-text">"The Grid. A digital frontier."</p>
+    <footer class="quote-author">– Kevin Flynn, Tron: Legacy</footer>
+  </blockquote>
+
+  <blockquote class="quote-box">
+    <p class="quote-text">"The thing about perfection is that it’s unknowable."</p>
+    <footer class="quote-author">– Clu, Tron: Legacy</footer>
+  </blockquote>
+</section>
+
+
+ <!-- footer -->
+<footer class="footer-neon text-center py-4 mt-5">
+  <p>&copy; 2025 Universo Tron | 
+    <a href="https://instagram.com" class="social-link" target="_blank">Instagram</a> | 
+    <a href="https://twitter.com" class="social-link" target="_blank">Twitter</a>
+  </p>
+  
+  <nav class="footer-nav mt-2">
+    <a href="#historia">Historia</a> |
+    <a href="#efectos">Efectos</a> |
+    <a href="#personajes">Personajes</a> |
+    <a href="#contacto">Contacto</a>
+  </nav>
+  
+  <p class="footer-contacto mt-2">Contacto: <a href="mailto:info@universotron.com" class="social-link">info@universotron.com</a></p>
+  <p class="footer-version">Versión 1.0 | Actualizado Julio 2025</p>
+</footer>
+
+  <!-- Modal Políticas -->
+  <div class="modal fade" id="politicasModal" tabindex="-1" aria-labelledby="politicasLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content bg-dark text-light">
+        <div class="modal-header">
+          <h5 class="modal-title" id="politicasLabel">Políticas de Privacidad</h5>
+          <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
+        </div>
+        <div class="modal-body">
+          <p>Este sitio respeta tu privacidad y no almacena información personal sin tu consentimiento.</p>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-info" data-bs-dismiss="modal">Cerrar</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="js/scripts.js"></script>
+
+<!-- Modal: El legado de Tron (1982) -->
+<div class="modal fade" id="modalTron1982" tabindex="-1" aria-labelledby="modalTron1982Label" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered modal-lg">
+    <div class="modal-content bg-dark text-light">
+      <div class="modal-header">
+        <h5 class="modal-title" id="modalTronEvolutionLabel">El legado de Tron (1982)</h5>
+        <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Cerrar"></button>
+      </div>
+      <div class="modal-body">
+        <img src="imagenes/Tron2.jpg" alt="Tron 1982" class="img-fluid mb-3 rounded">
+        <p><strong>Tron (1982)</strong> revolucionó el cine con su visión pionera del mundo digital. Fue una de las primeras películas en combinar acción real con animación generada por computadora. Kevin Flynn, un programador atrapado en un sistema virtual, se enfrenta al MCP junto al programa Tron, luchando por liberar el sistema del control autoritario.</p>
+        <p>Su estética de neón, circuitos y entornos oscuros marcó una tendencia visual que aún inspira al cine y los videojuegos.</p>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-outline-info" data-bs-dismiss="modal">Cerrar</button>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- Modal 2: Tron Evolution -->
+<div class="modal fade" id="modalTronEvolution" tabindex="-1" aria-labelledby="modalTronEvolutionLabel" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-scrollable modal-lg">
+    <div class="modal-content bg-dark text-light">
+      <div class="modal-header">
+        <h5 class="modal-title" id="modalTronEvolutionLabel">Tron: Evolution – El juego</h5>
+        <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
+      </div>
+      <div class="modal-body">
+        <img src="imagenes/Evolution.jpg" class="img-fluid mb-3" alt="Tron Evolution">
+        <p>Tron: Evolution es un videojuego que actúa como puente entre Tron (1982) y Tron: Legacy. Explora eventos clave como la caída de ISOs, la corrupción de programas y el ascenso de Clu como dictador del sistema. El jugador asume el rol de un programa llamado Anon, que lucha contra conspiraciones en una ciudad que mezcla estética futurista con tensión política.</p>
+      </div>
+      <div class="modal-footer">
+        <button class="btn btn-tema" data-bs-dismiss="modal">Cerrar</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Modal 3: Cultura RetroFuturista -->
+<div class="modal fade" id="modalRetroFuturismo" tabindex="-1" aria-labelledby="modalRetroFuturismoLabel" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-scrollable modal-lg">
+    <div class="modal-content bg-dark text-light">
+      <div class="modal-header">
+        <h5 class="modal-title" id="modalRetroFuturismoLabel">Cultura RetroFuturista</h5>
+        <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
+      </div>
+      <div class="modal-body">
+        <img src="imagenes/10.jpg" class="img-fluid mb-3" alt="Cultura RetroFuturista">
+        <p>El universo Tron ha influenciado no solo al cine, sino a toda una generación de diseñadores, músicos y desarrolladores. La estética retrofuturista se caracteriza por colores neón, geometría simple y luces brillantes, anticipando un futuro controlado por datos, redes y avatares digitales. Su impacto se siente en el arte, la moda y los videojuegos modernos.</p>
+      </div>
+      <div class="modal-footer">
+        <button class="btn btn-tema" data-bs-dismiss="modal">Cerrar</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+</body>
+</html>
+
+

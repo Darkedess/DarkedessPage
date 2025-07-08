@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Sitio web inspirado en Tron Legacy, con estilo neón y dinámico.">
+  <meta name="keywords" content="Tron, Neón, Sci-fi, Película, Tecnología">
+  <meta name="author" content="Jhon Carrasco">
+  <title>Universo Tron</title>
+  <link rel="icon" href="imagenes\thumb-1920-489259.jpg" type="image/x-icon">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron&display=swap" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet">
+  <link rel="stylesheet" href="css/estilos.css">
+</head>
+<body class="tron-mode">
+    <div class="bg-animation"></div>
+  <!-- Barra de navegación -->
+  <nav class="navbar fixed-top navbar-expand-lg navbar-dark bg-black border-bottom border-info">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="index.html"><i class="bi bi-lightning"></i> Universo Tron</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto">
+  <li class="nav-item"><a class="nav-link" href="index.html">Inicio</a></li>
+  <li class="nav-item"><a class="nav-link" href="noticias.html">Noticias</a></li>
+  <li class="nav-item"><a class="nav-link" href="enlaces.html">Enlaces</a></li>
+  <li class="nav-item"><a class="nav-link" href="contacto.html">Contacto</a></li>
+  <li class="nav-item"><a class="nav-link" href="#" data-bs-toggle="modal" data-bs-target="#politicasModal">Políticas</a></li>
+  <li class="nav-item">
+  <button onclick="toggleMode()" class="btn btn-sm btn-outline-info ms-2" title="Alternar modo">
+    <i class="bi bi-lightning-fill"></i>
+  </button>
+</li>
+</ul>
+
+      </div>
+    </div>
+  </nav>
+
+  <!-- Sección principal -->
+  <header class="text-center py-5">
+    <h1 id="main-title" class="display-4 fw-bold neon-text">Bienvenido al Universo Tron</h1>
+    <p class="lead">Explora un mundo digital lleno de luz, velocidad y estilo futurista.</p>
+  </header>
+
+<!-- Carrusel -->
+<div id="tronCarrusel" class="carousel slide container mb-5 pulse-box" data-bs-ride="carousel">
+  <div class="carousel-inner">
+    <div class="carousel-item active position-relative">
+      <img src="imagenes/wallpaperflare.com_wallpaper.jpg" class="d-block w-100" alt="Tron Slide 1">
+      <h5 class="carousel-title position-absolute top-50 start-50 translate-middle">Sistema Digital Paralelo</h5>
+    </div>
+    <div class="carousel-item position-relative">
+      <img src="imagenes/wallpaperflare.com_wallpaper (1).jpg" class="d-block w-100" alt="Tron Slide 2">
+      <h5 class="carousel-title position-absolute top-50 start-50 translate-middle">Programas con Personalidad</h5>
+    </div>
+    <div class="carousel-item position-relative">
+      <img src="imagenes/wallpaperflare.com_wallpaper (2).jpg" class="d-block w-100" alt="Tron Slide 3">
+      <h5 class="carousel-title position-absolute top-50 start-50 translate-middle">Estética Futurista de Neón</h5>
+    </div>
+  </div>
+  <button class="carousel-control-prev" type="button" data-bs-target="#tronCarrusel" data-bs-slide="prev">
+    <span class="carousel-control-prev-icon"></span>
+  </button>
+  <button class="carousel-control-next" type="button" data-bs-target="#tronCarrusel" data-bs-slide="next">
+    <span class="carousel-control-next-icon"></span>
+  </button>
+</div>
+
+<!-- Listas -->
+<section class="efectos-container pulse-box">
+  <div class="contenedor-efectos">
+    <h2 class="efecto-titulo">Efectos Visuales del Universo Tron</h2>
+
+    <!-- Efecto 1 -->
+    <div class="efecto-box pulse-box" onclick="toggleDescripcion(this)">
+      <h3>1. Fondos Oscuros</h3>
+      <p class="descripcion-oculta">
+        Los fondos oscuros permiten que los elementos brillantes resalten con fuerza, creando un fuerte contraste visual.
+      </p>
+    </div>
+
+    <!-- Efecto 2 -->
+    <div class="efecto-box pulse-box" onclick="toggleDescripcion(this)">
+      <h3>2. Luces Brillantes</h3>
+      <p class="descripcion-oculta">
+        Estilos luminosos en neón que simulan circuitos digitales y dan un efecto futurista intenso.
+      </p>
+    </div>
+
+    <!-- Efecto 3 -->
+    <div class="efecto-box pulse-box" onclick="toggleDescripcion(this)">
+      <h3>3. Tipografías Digitales</h3>
+      <p class="descripcion-oculta">
+        Fuentes que imitan pantallas digitales o entornos cibernéticos, como Orbitron.
+      </p>
+    </div>
+
+    <!-- Efecto 4 -->
+    <div class="efecto-box pulse-box" onclick="toggleDescripcion(this)">
+      <h3>4. Sombras Proyectadas</h3>
+      <p class="descripcion-oculta">
+        Las sombras y brillos se utilizan para dar profundidad y simular ambientes tridimensionales.
+      </p>
+    </div>
+  </div>
+</section>
+
+
+<!-- Historia de Tron (1982) -->
+<div class="tron-section d-flex flex-wrap align-items-center justify-content-between mb-5">
+  <img src="imagenes\Tron 1982.jpg" alt="Tron 1982" class="tron-image">
+  <div class="tron-text">
+    <h3>Tron (1982)</h3>
+    <p>La historia original sigue a Kevin Flynn, un programador que es digitalizado y atrapado dentro de un sistema informático donde debe enfrentarse al despiadado MCP (Master Control Program). En este mundo digital, un programa llamado Tron se convierte en su aliado para restaurar la libertad del sistema.</p>
+  </div>
+</div>
+
+<!-- Historia de Tron: Uprising (Serie animada entre 1982 y Legacy) -->
+<div class="tron-section d-flex flex-wrap align-items-center justify-content-between mb-5 flex-row-reverse">
+  <img src="imagenes\Tron uprising.webp" alt="Tron Uprising" class="tron-image">
+  <div class="tron-text">
+    <h3>Tron: Uprising (2012)</h3>
+    <p>Ambientada entre los eventos de la película original y Tron: Legacy, esta serie animada narra la historia de Beck, un joven programa que se convierte en el nuevo líder rebelde del sistema, guiado por Tron, quien ha quedado debilitado tras la lucha contra Clu. Beck adopta la identidad de Tron para liderar la resistencia contra el régimen opresor de Clu.</p>
+  </div>
+</div>
+
+<!-- Historia de Tron: Legacy -->
+<div class="tron-section d-flex flex-wrap align-items-center justify-content-between mb-5">
+  <img src="imagenes\Tron legacy.jpg" alt="Tron Legacy" class="tron-image">
+  <div class="tron-text">
+    <h3>Tron: Legacy (2010)</h3>
+    <p>Sam Flynn, hijo de Kevin Flynn, es arrastrado al mundo digital mientras busca a su padre desaparecido. Allí descubre que Clu, una creación de su padre, ha tomado el control del sistema. Junto a Quorra y un Tron reprogramado, Sam lucha para detener los planes de Clu y regresar al mundo real.</p>
+  </div>
+</div>
+
+<!-- Historia de Tron: Ares -->
+<div class="tron-section d-flex flex-wrap align-items-center justify-content-between mb-5 flex-row-reverse">
+  <img src="imagenes\Tron Ares.jpg" alt="Tron Ares" class="tron-image">
+  <div class="tron-text">
+    <h3>Tron: Ares (Próximamente)</h3>
+    <p>Aún en desarrollo, Tron: Ares promete expandir el universo Tron con nuevas tecnologías y conflictos. Aunque no se han revelado todos los detalles, se espera que la película explore la conexión entre el mundo digital y el real, elevando el conflicto entre programas y usuarios a una nueva dimensión.</p>
+  </div>
+</div>
+
+<section class="container text-center my-5">
+  <h2 class="titulo-cards">Universo Tron: Producciones Destacadas</h2>
+</section>
+
+<div class="container my-5">
+  <div class="row justify-content-center">
+    
+    <!-- Card 1 -->
+    <div class="col-md-4 mb-4">
+      <div class="card tron-card text-center">
+        <img src="imagenes/Legacy card.jpeg" class="card-img-top" alt="Tron Legacy">
+        <div class="card-body">
+          <h5 class="card-title">Tron Legacy</h5>
+          <p class="card-text">Explora la estética visual y la narrativa digital de una de las películas más icónicas de sci-fi.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Card 2 -->
+    <div class="col-md-4 mb-4">
+      <div class="card tron-card text-center">
+        <img src="imagenes/Uprising card.jpg" class="card-img-top" alt="Tron Uprising">
+        <div class="card-body">
+          <h5 class="card-title">Tron Uprising</h5>
+          <p class="card-text">La resistencia animada contra Clu, con un estilo visual innovador y profundo mensaje rebelde.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Card 3 -->
+    <div class="col-md-4 mb-4">
+      <div class="card tron-card text-center">
+        <img src="imagenes/Ares card.webp" class="card-img-top" alt="Tron Ares">
+        <div class="card-body">
+          <h5 class="card-title">Tron Ares</h5>
+          <p class="card-text">Lo que está por venir: la expansión del conflicto entre humanos y programas en una nueva era.</p>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+  <section class="futuro-tron pulse-box">
+  <div class="futuro-contenido">
+    <div class="futuro-texto">
+      <h2>El Futuro de la Franquicia TRON</h2>
+      <p>
+        Con la llegada de nuevas tecnologías, realidades virtuales y avances en inteligencia artificial,
+        el universo TRON se expande más allá de lo digital. La nueva entrega <strong>TRON: Ares</strong> promete
+        explorar temas aún más profundos sobre la conexión entre el humano y lo sintético. Su futuro está lleno de luz,
+        desafíos y evolución constante. El legado no ha terminado, apenas comienza una nueva era.
+      </p>
+    </div>
+    <div class="futuro-imagen">
+      <img src="imagenes\tron-legacy-lightcycle.jpg" alt="Tron Futuro">
+    </div>
+  </div>
+</section>
+
+<!-- footer -->
+<footer class="footer-neon text-center py-4 mt-5">
+  <p>&copy; 2025 Universo Tron | 
+    <a href="https://instagram.com" class="social-link" target="_blank">Instagram</a> | 
+    <a href="https://twitter.com" class="social-link" target="_blank">Twitter</a>
+  </p>
+  
+  <nav class="footer-nav mt-2">
+    <a href="#historia">Historia</a> |
+    <a href="#efectos">Efecto</a> |
+    <a href="#personajes">Personajes</a> |
+    <a href="#contacto">Contacto</a>
+  </nav>
+  
+  <p class="footer-contacto mt-2">Contacto: <a href="mailto:info@universotron.com" class="social-link">info@universotron.com</a></p>
+  <p class="footer-version">Versión 1.0 | Actualizado Julio 2025</p>
+</footer>
+
+
+  <!-- Modal Políticas -->
+  <div class="modal fade" id="politicasModal" tabindex="-1" aria-labelledby="politicasLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content bg-dark text-light">
+        <div class="modal-header">
+          <h5 class="modal-title" id="politicasLabel">Políticas de Privacidad</h5>
+          <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
+        </div>
+        <div class="modal-body">
+          <p>Este sitio respeta tu privacidad y no almacena información personal sin tu consentimiento.</p>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-info" data-bs-dismiss="modal">Cerrar</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="js/scripts.js"></script>
+</body>
+</html>

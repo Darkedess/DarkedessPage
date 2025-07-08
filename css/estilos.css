@@ -1,0 +1,1395 @@
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Rajdhani:wght@300;400;600;700&display=swap'); 
+
+/* MODO OSCURO (por defecto) */
+body {
+  font-family: 'Orbitron', sans-serif;
+  background-color: #0a0a0a;
+  color: #f8f9fa;
+  padding-top: 70px; /* <-- aquí el espaciado para que no se pegue al navbar */
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.neon-text {
+  color: #00f7ff;
+  text-shadow: 0 0 5px #00f7ff, 0 0 10px #00f7ff, 0 0 20px #00f7ff;
+}
+
+a {
+  text-decoration: none;
+  color: #f8f9fa;
+}
+
+a:hover {
+  color: #00f7ff;
+  text-shadow: 0 0 5px #00f7ff;
+}
+
+.btn-info {
+  background-color: #00f7ff;
+  border: none;
+  color: #000;
+  font-weight: bold;
+  box-shadow: 0 0 10px #00f7ff;
+  transition: transform 0.2s ease;
+}
+
+.btn-info:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 15px #00f7ff;
+}
+
+.card {
+  background-color: #121212;
+  border: 1px solid #00f7ff;
+  transition: background-color 0.3s, border-color 0.3s;
+}
+
+.card:hover {
+  background-color: #1a1a1a;
+  border-color: #0ff;
+}
+
+.btn-outline-info {
+  border-color: #00f7ff;
+  color: #00f7ff;
+}
+
+.btn-outline-info:hover {
+  background-color: #00f7ff;
+  color: #000;
+  box-shadow: 0 0 10px #00f7ff;
+}
+
+/* MODO CLARO */
+body.light-mode {
+  background-color: #f4f4f4;
+  color: #222;
+}
+
+body.light-mode .neon-text {
+  color: #005577;
+  text-shadow: none;
+}
+
+body.light-mode a {
+  color: #222;
+}
+
+body.light-mode a:hover {
+  text-shadow: none;
+  color: #0077aa;
+}
+
+body.light-mode .card {
+  background-color: #ffffff;
+  border-color: #00aaff;
+}
+
+body.light-mode .card:hover {
+  background-color: #eaeaea;
+  border-color: #0077aa;
+}
+
+body.light-mode .btn-info {
+  background-color: #00aaff;
+  color: #fff;
+}
+
+body.light-mode .btn-outline-info {
+  border-color: #00aaff;
+  color: #00aaff;
+}
+
+body.light-mode .btn-outline-info:hover {
+  background-color: #00aaff;
+  color: #fff;
+  box-shadow: 0 0 10px #00aaff;
+}
+
+/* TRANSICIONES GLOBALES */
+.card, .btn, .navbar, .modal-content {
+  transition: all 0.3s ease;
+}
+
+/* NAVBAR EN MODO CLARO */
+body.light-mode .navbar {
+  background-color: #ffffff !important;
+  border-bottom: 2px solid #00aaff;
+}
+
+body.light-mode .navbar-nav .nav-link,
+body.light-mode .navbar-brand {
+  color: #000 !important;
+}
+
+body.light-mode .navbar-nav .nav-link:hover {
+  color: #0077aa !important;
+  text-shadow: none;
+}
+
+/* ---- ESTILOS PERSONALIZADOS NEÓN ---- */
+
+/* Gradiente animado (útil para backgrounds de secciones o botones) */
+@keyframes gradianteGlow {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+/* Título o sección con gradiente animado */
+.glow-gradient {
+  background: linear-gradient(90deg, #00f7ff, #0ff, #00f7ff);
+  background-size: 200% 200%;
+  animation: gradianteGlow 5s ease infinite;
+  -webkit-background-clip: text;
+  background-clip: text; /* <--- Esta línea soluciona el warning */
+  -webkit-text-fill-color: transparent;
+}
+
+/* Sombras de texto pulsantes */
+@keyframes pulseGlow {
+  from {
+    text-shadow: 0 0 5px #00f7ff;
+  }
+  to {
+    text-shadow: 0 0 20px #00f7ff, 0 0 30px #0ff;
+  }
+}
+
+.neon-text {
+  color: #00f7ff;
+  text-shadow: 0 0 5px #00f7ff, 0 0 10px #00f7ff, 0 0 20px #00f7ff;
+  animation: pulseGlow 2s infinite alternate;
+}
+
+/* Hover eléctrico para tarjetas */
+.card:hover {
+  box-shadow: 0 0 10px #00f7ff, 0 0 20px #00f7ff;
+  border-color: #00f7ff;
+  transition: all 0.3s ease;
+}
+
+/* === MODO VILLANO (rojo neón oscuro) === */
+body.villain-mode {
+  background-color: #0a0a0a;
+  color: #ffccd5;
+}
+
+/* Títulos neón rojos */
+body.villain-mode .neon-text {
+  color: #ff0040;
+  text-shadow: 0 0 5px #ff0040, 0 0 10px #ff0040, 0 0 20px #ff3366;
+}
+
+/* Enlaces */
+body.villain-mode a {
+  color: #ffccd5;
+}
+body.villain-mode a:hover {
+  color: #ff3366;
+  text-shadow: 0 0 5px #ff3366;
+}
+
+/* Botón principal */
+body.villain-mode .btn-info {
+  background-color: #ff0040;
+  color: #fff;
+  box-shadow: 0 0 10px #ff0040;
+}
+
+body.villain-mode .btn-info:hover {
+  background-color: #ff3366;
+  transform: scale(1.05);
+  box-shadow: 0 0 15px #ff3366;
+}
+
+/* Botón outline */
+body.villain-mode .btn-outline-info {
+  border-color: #ff0040;
+  color: #ff0040;
+}
+body.villain-mode .btn-outline-info:hover {
+  background-color: #ff0040;
+  color: #fff;
+  box-shadow: 0 0 10px #ff0040;
+}
+
+/* Tarjetas */
+body.villain-mode .card {
+  background-color: #1a0a0a;
+  border-color: #ff0040;
+}
+body.villain-mode .card:hover {
+  box-shadow: 0 0 10px #ff0040, 0 0 20px #ff3366;
+  border-color: #ff3366;
+}
+
+/* Navbar */
+body.villain-mode .navbar {
+  background-color: #1a0a0a !important;
+  border-bottom: 2px solid #ff0040;
+}
+body.villain-mode .navbar-nav .nav-link,
+body.villain-mode .navbar-brand {
+  color: #ffccd5 !important;
+}
+body.villain-mode .navbar-nav .nav-link:hover {
+  color: #ff3366 !important;
+  text-shadow: 0 0 3px #ff3366;
+}
+
+.villain-text {
+  color: #ff003c;
+  text-shadow: 0 0 5px #ff003c, 0 0 10px #ff003c, 0 0 20px #ff003c;
+  animation: pulseVillain 2s infinite alternate;
+}
+
+@keyframes pulseVillain {
+  from {
+    text-shadow: 0 0 5px #ff0040;
+  }
+  to {
+    text-shadow: 0 0 20px #ff0040, 0 0 30px #ff3366;
+  }
+}
+
+@keyframes pulseVillain {
+  from {
+    text-shadow: 0 0 5px #ff003c;
+  }
+  to {
+    text-shadow: 0 0 20px #ff003c, 0 0 30px #ff5570;
+  }
+}
+
+body.villain-mode .neon-text {
+  color: #ff003c;
+  text-shadow: 0 0 5px #ff003c, 0 0 10px #ff003c, 0 0 20px #ff003c;
+  animation: pulseVillain 2s infinite alternate;
+}
+
+/* === Ajustes para modo villano === */
+
+body.villain-mode .navbar {
+  border-bottom: 2px solid #ff003c !important;
+}
+
+body.villain-mode footer {
+  border-top: 2px solid #ff003c !important;
+}
+
+/* Enlaces del footer en rojo */
+body.villain-mode footer a {
+  color: #ff003c;
+}
+
+body.villain-mode footer a:hover {
+  color: #ffffff;
+  text-shadow: 0 0 5px #ff003c;
+}
+
+/* === Carrusel con título y fondo semitransparente === */
+
+.carousel-caption {
+  background-color: rgba(0, 0, 0, 0.5); /* fondo oscuro semitransparente */
+  border-radius: 10px;
+  padding: 1rem 2rem;
+  bottom: 20px; /* ligeramente arriba del borde inferior */
+}
+
+.carousel-title {
+  font-size: 2.5rem;
+  font-weight: bold;
+  text-align: center;
+  transition: color 0.3s, text-shadow 0.3s;
+}
+
+body:not(.villain-mode) .carousel-title {
+  color: #00f7ff;
+  text-shadow: 0 0 5px #00f7ff, 0 0 10px #00f7ff, 0 0 20px #00f7ff;
+  animation: pulseGlow 2s infinite alternate;
+}
+
+body.villain-mode .carousel-title {
+  color: #ff003c;
+  text-shadow: 0 0 5px #ff003c, 0 0 15px #ff003c, 0 0 25px #0ff;
+  animation: pulseVillain 2s infinite alternate;
+}
+
+
+body.villain-mode .carousel-caption {
+  background-color: rgba(20, 0, 0, 0.5); /* fondo semitransparente rojizo */
+}
+
+body.villain-mode .carousel-title {
+  color: #ff003c;
+  text-shadow: 0 0 5px #ff003c, 0 0 15px #ff003c, 0 0 25px #0ff;
+  animation: pulseVillain 2s infinite alternate;
+}
+
+@keyframes pulseVillain {
+  0% {
+    text-shadow: 0 0 5px #ff003c;
+  }
+  100% {
+    text-shadow: 0 0 20px #ff003c, 0 0 30px #0ff;
+  }
+}
+
+/* Animación de aparición suave desde abajo */
+@keyframes slideUpFade {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.carousel-title {
+  font-size: 2.5rem;
+  font-weight: bold;
+  text-align: center;
+  transition: color 0.3s, text-shadow 0.3s;
+  opacity: 0;
+  animation: slideUpFade 1s ease forwards;
+  animation-delay: 0.5s;
+}
+
+/* Estilo por defecto (modo Tron) */
+body:not(.villain-mode) .carousel-title {
+  color: #00f7ff;
+  text-shadow: 0 0 5px #00f7ff, 0 0 10px #00f7ff, 0 0 20px #00f7ff;
+  animation-name: slideUpFade, pulseGlow;
+  animation-duration: 1s, 2s;
+  animation-delay: 0.5s, 1s;
+  animation-fill-mode: forwards;
+  animation-iteration-count: 1, infinite;
+  animation-direction: normal, alternate;
+}
+
+/* Modo villano */
+body.villain-mode .carousel-title {
+  color: #ff003c;
+  text-shadow: 0 0 5px #ff003c, 0 0 15px #ff003c, 0 0 25px #ff003c;
+  animation-name: slideUpFade, pulseVillain;
+  animation-duration: 1s, 2s;
+  animation-delay: 0.5s, 1s;
+  animation-fill-mode: forwards;
+  animation-iteration-count: 1, infinite;
+  animation-direction: normal, alternate;
+}
+
+/* Animación de pulsación Villana */
+@keyframes pulseVillain {
+  from {
+    text-shadow: 0 0 5px #ff003c;
+  }
+  to {
+    text-shadow: 0 0 20px #ff003c, 0 0 30px #ff003c;
+  }
+}
+
+/* ==== Borde Neón del Carrusel ==== */
+
+#tronCarrusel {
+  border: 3px solid #00f7ff;
+  box-shadow: 0 0 15px #00f7ff;
+  border-radius: 15px;
+  overflow: hidden;
+  padding: 0;
+  margin: auto;
+  max-width: 100%;
+}
+
+/* Para que la imagen no tenga espacios */
+#tronCarrusel .carousel-item img {
+  display: block;
+  width: 100%;
+  height: auto;
+  border-radius: 0;
+  margin: 0;
+}
+
+/* Villain mode */
+body.villain-mode #tronCarrusel {
+  border-color: #ff003c;
+  box-shadow: 0 0 15px #ff003c;
+}
+
+/* ======== LISTAS NEÓN TRON (modo normal) ======== */
+ul, ol {
+  padding-left: 2rem;
+  font-size: 1.1rem;
+  line-height: 1.7;
+  list-style-position: inside;
+  color: #f8f9fa;
+}
+
+ul li::marker {
+  color: #00f7ff;
+  text-shadow: 0 0 5px #00f7ff, 0 0 10px #00f7ff;
+}
+
+ol li::marker {
+  color: #00f7ff;
+  font-weight: bold;
+  text-shadow: 0 0 5px #00f7ff, 0 0 10px #00f7ff;
+}
+
+/* ==== LISTAS EN MODO VILLANO ==== */
+body.villain-mode ul li::marker,
+body.villain-mode ol li::marker {
+  color: #ff003c;
+  text-shadow: 0 0 5px #ff003c, 0 0 10px #ff003c;
+}
+
+body.villain-mode ul,
+body.villain-mode ol {
+  color: #fff0f5;
+}
+
+.efectos-container {
+  padding: 2rem;
+  max-width: 800px;
+  margin: auto;
+}
+
+.efecto-titulo {
+  text-align: center;
+  font-size: 2rem;
+  color: #00f7ff;
+  margin-bottom: 2rem;
+}
+
+.efecto-box {
+  background-color: rgba(0, 0, 0, 0.6);
+  border: 2px solid #00f7ff;
+  border-radius: 10px;
+  padding: 1rem 1.5rem;
+  margin-bottom: 1rem;
+  transition: all 0.3s ease;
+  cursor: pointer;
+  position: relative;
+  overflow: hidden;
+}
+
+.efecto-box:hover {
+  border-color: #ff0040;
+  box-shadow: 0 0 15px #ff0040, 0 0 25px #ff0040;
+  transform: scale(1.02);
+}
+
+.efecto-box h3 {
+  margin: 0;
+  color: #fff;
+  font-size: 1.3rem;
+  font-family: 'Orbitron', sans-serif;
+}
+
+.descripcion-oculta {
+  margin-top: 0.5rem;
+  color: #ddd;
+  max-height: 0;
+  opacity: 0;
+  transition: all 0.5s ease;
+  overflow: hidden;
+}
+
+/* Cuando se activa la descripción */
+.efecto-box.active .descripcion-oculta {
+  max-height: 200px;
+  opacity: 1;
+}
+
+/* CONTENEDOR GENERAL */
+.efectos-container {
+  padding: 2rem;
+  max-width: 800px;
+  margin: auto;
+}
+
+/* TÍTULO PRINCIPAL */
+.efecto-titulo {
+  text-align: center;
+  font-size: 2rem;
+  color: #00f7ff;
+  margin-bottom: 2rem;
+  font-family: 'Orbitron', sans-serif;
+  text-shadow: 0 0 10px #00f7ff;
+}
+
+body.villain-mode .efecto-titulo {
+  color: #ff0040;
+  text-shadow: 0 0 10px #ff0040;
+}
+
+/* CUADROS INTERACTIVOS */
+.efecto-box {
+  background-color: rgba(0, 0, 0, 0.6);
+  border: 2px solid #00f7ff;
+  border-radius: 10px;
+  padding: 1rem 1.5rem;
+  margin-bottom: 1rem;
+  transition: all 0.4s ease;
+  cursor: pointer;
+  position: relative;
+  overflow: hidden;
+}
+
+.efecto-box:hover {
+  border-color: #0ff;
+  box-shadow: 0 0 15px #00f7ff, 0 0 25px #00f7ff;
+  transform: scale(1.02);
+}
+
+/* MODO VILLANO */
+body.villain-mode .efecto-box {
+  border-color: #ff0040;
+  box-shadow: 0 0 10px #ff0040;
+}
+
+body.villain-mode .efecto-box:hover {
+  box-shadow: 0 0 20px #ff0040, 0 0 35px #ff0040;
+  border-color: #ff0040;
+}
+
+/* TÍTULO INTERNO */
+.efecto-box h3 {
+  margin: 0;
+  color: #fff;
+  font-size: 1.3rem;
+  font-family: 'Orbitron', sans-serif;
+}
+
+/* DESCRIPCIÓN OCULTA */
+.descripcion-oculta {
+  margin-top: 0.5rem;
+  color: #ddd;
+  max-height: 0;
+  opacity: 0;
+  transition: all 0.5s ease;
+  overflow: hidden;
+}
+
+/* ACTIVA LA DESCRIPCIÓN */
+.efecto-box.active .descripcion-oculta {
+  max-height: 200px;
+  opacity: 1;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Rajdhani:wght@300;400;600;700&display=swap');
+
+/* Fondo animado dinámico */
+.bg-animation {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -10; /* Muy atrás */
+  background: linear-gradient(45deg, #0a0a0a, #1a1a2e, #16213e);
+  background-size: 400% 400%;
+  animation: gradientShift 8s ease infinite;
+  pointer-events: none; /* No interfiere con clics */
+}
+
+/* Capas pulsantes sobre el fondo */
+.bg-animation::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: 
+    radial-gradient(circle at 25% 25%, #00ffff22 0%, transparent 50%),
+    radial-gradient(circle at 75% 75%, #ff00ff22 0%, transparent 50%),
+    radial-gradient(circle at 50% 50%, #ffff0022 0%, transparent 50%);
+  animation: pulse 4s ease-in-out infinite alternate;
+}
+
+/* Animación del degradado */
+@keyframes gradientShift {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+/* Efecto de pulso */
+@keyframes pulse {
+  0% { opacity: 0.3; }
+  100% { opacity: 0.8; }
+}
+
+/* === FONDO EN MODO VILLANO === */
+body.villain-mode .bg-animation {
+  background: linear-gradient(45deg, #1a0000, #330000, #440011);
+  background-size: 400% 400%;
+  animation: gradientShift 8s ease infinite;
+}
+
+body.villain-mode .bg-animation::before {
+  background-image: 
+    radial-gradient(circle at 25% 25%, #ff004422 0%, transparent 50%),
+    radial-gradient(circle at 75% 75%, #ff220022 0%, transparent 50%),
+    radial-gradient(circle at 50% 50%, #aa000022 0%, transparent 50%);
+  animation: pulse 4s ease-in-out infinite alternate;
+}
+
+.historia-box {
+  gap: 1.5rem;
+  margin-bottom: 2rem;
+}
+
+.historia-img {
+  width: 300px;
+  max-width: 100%;
+  border-radius: 10px;
+  border: 2px solid #00f7ff;
+  box-shadow: 0 0 10px #00f7ff;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.historia-text {
+  flex: 1;
+  color: #f8f9fa;
+}
+
+/* Hover animado para imagen */
+.historia-img:hover {
+  transform: scale(1.03);
+  box-shadow: 0 0 20px #00f7ff;
+}
+
+/* Adaptación para modo villano */
+body.villain-mode .historia-img {
+  border-color: #ff0040;
+  box-shadow: 0 0 10px #ff0040;
+}
+
+body.villain-mode .historia-img:hover {
+  box-shadow: 0 0 20px #ff0040;
+}
+
+/* === Fondo con borde de neón lateral para bloques de historia === */
+.historia-box {
+  background: rgba(10, 10, 10, 0.6);
+  border-left: 5px solid #00f7ff;
+  padding: 1.5rem;
+  border-radius: 10px;
+  position: relative;
+  transition: all 0.3s ease;
+  box-shadow: 0 0 10px #00f7ff;
+}
+
+/* Efecto hover Tron */
+.historia-box:hover {
+  border-left-color: #0ff;
+  box-shadow: 0 0 15px #00f7ff, 0 0 25px #0ff;
+}
+
+/* Estilo para modo villano */
+body.villain-mode .historia-box {
+  border-left: 5px solid #ff0040;
+  box-shadow: 0 0 10px #ff0040;
+  background: rgba(20, 0, 0, 0.6);
+}
+
+body.villain-mode .historia-box:hover {
+  border-left-color: #ff1a4d;
+  box-shadow: 0 0 20px #ff0040, 0 0 30px #ff0040;
+}
+
+.tron-section {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  margin: 3rem 0;
+  padding: 2rem;
+  border-radius: 12px;
+  gap: 2rem;
+  background-color: rgba(0, 0, 0, 0.6);
+  border: 2px solid;
+  box-shadow: 0 0 20px var(--neon-color);
+  transition: box-shadow 0.5s ease, border-color 0.5s ease;
+}
+
+.tron-section:hover {
+  box-shadow: 0 0 40px var(--neon-color);
+}
+
+.tron-section img {
+  max-width: 100%;
+  width: 400px;
+  border-radius: 10px;
+  box-shadow: 0 0 15px var(--neon-color);
+  transition: transform 0.3s ease;
+}
+
+.tron-section:hover img {
+  transform: scale(1.05);
+}
+
+.tron-text {
+  flex: 1;
+  color: white;
+  font-size: 1.1rem;
+  font-family: 'Rajdhani', sans-serif;
+  text-shadow: 0 0 8px var(--neon-color);
+  line-height: 1.7;
+  text-align: justify;
+}
+
+/* Estilos dinámicos por tema */
+body.tron-mode {
+  --neon-color: #00f0ff;
+}
+
+body.villain-mode {
+  --neon-color: #ff0040;
+}
+
+.futuro-contenido {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  background-color: rgba(0, 0, 0, 0.5); /* Capa semitransparente */
+  padding: 2rem;
+  border-radius: 15px;
+  gap: 2rem;
+}
+
+.futuro-texto {
+  flex: 1;
+  font-size: 1.1rem;
+  font-family: 'Rajdhani', sans-serif;
+  line-height: 1.7;
+  backdrop-filter: blur(3px);
+  color: #ffffff;
+  text-shadow: 0 0 10px var(--neon-color);
+}
+
+.futuro-texto h2 {
+  font-family: 'Orbitron', sans-serif;
+  font-size: 2rem;
+  margin-bottom: 1rem;
+  color: var(--neon-color);
+  text-shadow: 0 0 15px var(--neon-color);
+}
+
+.futuro-imagen img {
+  max-width: 400px;
+  width: 100%;
+  border-radius: 10px;
+  box-shadow: 0 0 15px var(--neon-color);
+}
+
+/* Adaptación por tema */
+body.tron-mode {
+  --neon-color: #00ffff;
+}
+
+body.villain-mode {
+  --neon-color: #ff0033;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .futuro-contenido {
+    flex-direction: column;
+    text-align: center;
+  }
+}
+
+.tron-mode .tron-section {
+  border: 2px solid #00ffff;
+  box-shadow: 0 0 15px #00ffff, 0 0 30px #00ffff inset;
+  transition: box-shadow 0.3s ease;
+}
+
+@keyframes neonPulseTron {
+  0% {
+    box-shadow: 0 0 10px #00ffff, 0 0 20px #00ffff inset;
+  }
+  50% {
+    box-shadow: 0 0 20px #00ffff, 0 0 35px #00ffff inset;
+  }
+  100% {
+    box-shadow: 0 0 10px #00ffff, 0 0 20px #00ffff inset;
+  }
+}
+
+@keyframes neonPulseVillain {
+  0% {
+    box-shadow: 0 0 10px #ff0033, 0 0 20px #ff0033 inset;
+  }
+  50% {
+    box-shadow: 0 0 20px #ff0033, 0 0 35px #ff0033 inset;
+  }
+  100% {
+    box-shadow: 0 0 10px #ff0033, 0 0 20px #ff0033 inset;
+  }
+}
+
+.tron-mode .tron-section {
+  border: 2px solid #00ffff !important;
+  animation: neonPulseTron 2s infinite !important;
+}
+
+.villain-mode .tron-section {
+  border: 2px solid #ff0033 !important;
+  animation: neonPulseVillain 2s infinite !important;
+}
+
+body.tron-mode .tron-section {
+  border: 2px solid #00f0ff;
+  animation: neonPulseTron 2s infinite;
+}
+
+body.tron-mode .tron-text {
+  text-shadow: 0 0 10px #00f0ff;
+}
+
+.brillo-tron {
+  border: 2px solid #00ffff !important;
+  animation: neonPulseTron 2s infinite !important;
+}
+
+/* Brillo pulsante Tron */
+@keyframes tronPulseBox {
+  0% {
+    box-shadow: 0 0 10px #00f7ff, 0 0 20px #00f7ff inset;
+  }
+  50% {
+    box-shadow: 0 0 20px #00f7ff, 0 0 40px #00f7ff inset;
+  }
+  100% {
+    box-shadow: 0 0 10px #00f7ff, 0 0 20px #00f7ff inset;
+  }
+}
+
+body.tron-mode .pulse-box {
+  animation: tronPulseBox 2.5s ease-in-out infinite;
+}
+
+/* Brillo pulsante Villano */
+@keyframes villainPulseBox {
+  0% {
+    box-shadow: 0 0 10px #ff003c, 0 0 20px #ff003c inset;
+  }
+  50% {
+    box-shadow: 0 0 20px #ff003c, 0 0 40px #ff003c inset;
+  }
+  100% {
+    box-shadow: 0 0 10px #ff003c, 0 0 20px #ff003c inset;
+  }
+}
+
+body.villain-mode .pulse-box {
+  animation: villainPulseBox 2.5s ease-in-out infinite;
+}
+
+/* Grid y diseño base */
+.neon-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.neon-card {
+  background-color: rgba(0, 0, 0, 0.6);
+  padding: 1.5rem;
+  border: 2px solid var(--neon-color);
+  border-radius: 10px;
+  text-align: center;
+  color: white;
+  box-shadow: 0 0 10px var(--neon-color);
+  transition: all 0.3s ease;
+  height: 100%;
+}
+
+.neon-card h5 {
+  font-family: 'Orbitron', sans-serif;
+  font-size: 1.3rem;
+  margin-bottom: 1rem;
+  text-shadow: 0 0 8px var(--neon-color);
+}
+
+.neon-card:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 20px var(--neon-color), 0 0 35px var(--neon-color);
+  border-color: var(--neon-color);
+}
+
+/* Adaptación automática a modo Tron o Villano (ya usas estas variables) */
+body.tron-mode {
+  --neon-color: #00f7ff;
+}
+
+body.villain-mode {
+  --neon-color: #ff003c;
+}
+
+.tron-card {
+  background-color: rgba(0, 0, 0, 0.85);
+  border: 1px solid #00ffff;
+  border-radius: 15px;
+  box-shadow: 0 0 10px #00ffff;
+  color: #00ffff;
+  transition: transform 0.3s, box-shadow 0.3s;
+  animation: grid-flicker 3s infinite ease-in-out;
+}
+
+.villain-mode .tron-card {
+  border: 1px solid #ff0033;
+  box-shadow: 0 0 10px #ff0033;
+  color: #ff3366;
+  animation: grid-flicker-red 3s infinite ease-in-out;
+}
+
+.tron-card:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 20px #00ffff, 0 0 30px #00ffff;
+}
+
+.villain-mode .tron-card:hover {
+  box-shadow: 0 0 20px #ff0033, 0 0 30px #ff0033;
+}
+
+/* Efecto de rejilla brillante */
+@keyframes grid-flicker {
+  0%, 100% { box-shadow: 0 0 10px #00ffff; }
+  50% { box-shadow: 0 0 20px #00ffff, 0 0 40px #00ffff; }
+}
+
+@keyframes grid-flicker-red {
+  0%, 100% { box-shadow: 0 0 10px #ff0033; }
+  50% { box-shadow: 0 0 20px #ff0033, 0 0 40px #ff0033; }
+}
+
+.tron-card .card-title {
+  font-family: 'Orbitron', sans-serif;
+  font-size: 1.5rem;
+  margin-bottom: 0.5rem;
+  animation: parpadeoTitulo 2.5s infinite ease-in-out;
+}
+
+@keyframes parpadeoTitulo {
+  0%, 100% { text-shadow: 0 0 10px currentColor; }
+  50% { text-shadow: 0 0 20px currentColor, 0 0 30px currentColor; }
+}
+
+.titulo-cards {
+  font-family: 'Orbitron', sans-serif;
+  font-size: 2rem;
+  font-weight: 700;
+  color: #00ffff;
+  text-shadow: 0 0 10px #00ffff;
+  animation: parpadeoTitulo 3s infinite ease-in-out;
+  margin-bottom: 2rem;
+}
+
+.villain-mode .titulo-cards {
+  color: #ff3366;
+  text-shadow: 0 0 10px #ff3366;
+}
+
+.futuro-tron {
+  margin-bottom: 60px; /* Ajusta si deseas más espacio */
+}
+
+.footer-neon {
+  border-top: 2px solid var(--neon-color);
+  background-color: transparent;
+  color: var(--neon-color);
+  font-family: 'Orbitron', sans-serif;
+  font-size: 14px;
+  letter-spacing: 1px;
+  box-shadow: 0 -0.5px 20px var(--neon-color);
+}
+
+.social-link {
+  color: var(--neon-color);
+  text-decoration: none;
+  transition: color 0.3s, text-shadow 0.3s;
+}
+.social-link:hover {
+  color: white;
+  text-shadow: 0 0 8px var(--neon-color);
+}
+
+body.tron-mode {
+  --neon-color: #00f0ff;
+}
+body.villain-mode {
+  --neon-color: #ff0040;
+}
+
+.footer-nav a,
+.footer-contacto a,
+.footer-version,
+.footer-credito {
+  color: var(--neon-color);
+  text-decoration: none;
+  margin: 0 8px;
+  font-size: 13px;
+  transition: color 0.3s;
+}
+
+.footer-nav a:hover {
+  color: white;
+  text-shadow: 0 0 6px var(--neon-color);
+}
+
+/* Tarjeta base */
+.tarjeta-tematica {
+  padding: 20px;
+  border-radius: 10px;
+  border: 1px solid;
+  transition: all 0.3s ease;
+  box-shadow: 0 0 15px rgba(0,0,0,0.3);
+  background-color: rgba(0, 0, 0, 0.85); /* Default fallback */
+}
+
+/* Texto y enlaces */
+.tarjeta-tematica .card-title,
+.tarjeta-tematica .card-text {
+  color: #ffffff;
+}
+
+/* BOTÓN en estado general */
+.tarjeta-tematica .btn {
+  font-weight: bold;
+  transition: 0.3s ease;
+}
+
+/* Modo Tron */
+body.tron-mode .tarjeta-tematica {
+  border-color: #00ffff;
+  box-shadow: 0 0 20px #00ffff;
+}
+
+body.tron-mode .tarjeta-tematica .btn {
+  color: #00ffff;
+  border-color: #00ffff;
+}
+
+body.tron-mode .tarjeta-tematica .btn:hover {
+  background-color: #00ffff;
+  color: black;
+}
+
+/* Modo Villano */
+body.villain-mode .tarjeta-tematica {
+  border-color: #ff003c;
+  box-shadow: 0 0 20px #ff003c;
+}
+
+body.villain-mode .tarjeta-tematica .btn {
+  color: #ff003c;
+  border-color: #ff003c;
+}
+
+body.villain-mode .tarjeta-tematica .btn:hover {
+  background-color: #ff003c;
+  color: black;
+}
+
+.tarjeta-tematica:hover {
+  transform: scale(1.02);
+  transition: transform 0.3s ease;
+}
+
+/* Estilo base para texto */
+.tarjeta-tematica .card-title,
+.tarjeta-tematica .card-text,
+.tarjeta-tematica a {
+  transition: color 0.3s ease;
+}
+
+/* Texto en modo TRON (azul neón tenue) */
+body.tron-mode .tarjeta-tematica .card-title,
+body.tron-mode .tarjeta-tematica .card-text,
+body.tron-mode .tarjeta-tematica a {
+  color: #a0ffff;
+}
+
+/* Texto en modo VILLANO (rojo neón tenue) */
+body.villain-mode .tarjeta-tematica .card-title,
+body.villain-mode .tarjeta-tematica .card-text,
+body.villain-mode .tarjeta-tematica a {
+  color: #ff8aa0;
+}
+
+/* Botón con color tenue por defecto */
+body.tron-mode .tarjeta-tematica .btn {
+  color: #a0ffff;
+  border-color: #00ffff;
+}
+
+body.villain-mode .tarjeta-tematica .btn {
+  color: #ff8aa0;
+  border-color: #ff003c;
+}
+
+:root {
+  --text-color: #ffffff; /* Tron por defecto */
+  --card-bg-color: #000000;
+}
+
+body.villain-mode {
+  --text-color: #ffb3c6;
+  --card-bg-color: #1a000b;
+}
+
+body.tron-mode {
+  --text-color: #00ffff;
+  --card-bg-color: #000000;
+}
+
+.custom-card {
+  background-color: var(--card-bg-color);
+  color: var(--text-color);
+  border: 1px solid var(--glow-color);
+  transition: all 0.3s ease;
+}
+
+.custom-card .card-title,
+.custom-card .card-text {
+  color: var(--text-color) !important;
+}
+
+.custom-card .btn {
+  border-color: var(--glow-color);
+  color: var(--glow-color);
+}
+
+.custom-card .btn:hover {
+  background-color: var(--glow-color);
+  color: #000;
+}
+
+.btn-tema {
+  font-family: 'Orbitron', sans-serif;
+  border: 2px solid var(--glow-color);
+  color: var(--glow-color);
+  background-color: transparent;
+  transition: all 0.3s ease;
+  box-shadow: 0 0 5px var(--glow-color);
+  text-shadow: 0 0 5px var(--glow-color);
+}
+
+.btn-tema:hover {
+  background-color: var(--glow-color);
+  color: black;
+  box-shadow: 0 0 15px var(--glow-color), 0 0 30px var(--glow-color);
+}
+
+body.tron-mode {
+  --glow-color: #00ffff;
+  --card-bg-color: #0a0a0a;
+  --text-color: #ffffff;
+}
+
+body.villain-mode {
+  --glow-color: #ff003c;
+  --card-bg-color: #1a0008;
+  --text-color: #f4dcdc;
+}
+
+.custom-modal {
+  background: rgba(0, 0, 0, 0.95);
+  color: #00ffff;
+  border: 2px solid #00ffff;
+  box-shadow: 0 0 25px #00ffff;
+}
+
+body.villain-mode .custom-modal {
+  color: #ff003c;
+  border-color: #ff003c;
+  box-shadow: 0 0 25px #ff003c;
+}
+
+.custom-modal ul li {
+  list-style: none;
+  margin-bottom: 0.5rem;
+}
+
+.curiosidades-section h2 {
+  font-family: 'Orbitron', sans-serif;
+  text-shadow: 0 0 10px var(--color-neon);
+}
+
+.curiosidad-card {
+  background-color: rgba(0, 0, 0, 0.6);
+  border: 1px solid var(--color-neon);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  color: var(--color-neon);
+  box-shadow: 0 0 15px var(--color-neon);
+}
+
+.curiosidad-card:hover {
+  transform: scale(1.03);
+  box-shadow: 0 0 25px var(--color-neon), 0 0 50px var(--color-neon);
+}
+
+body.villain-mode .curiosidad-card {
+  border-color: #ff003c;
+  color: #ff003c;
+  box-shadow: 0 0 15px #ff003c;
+}
+
+body.villain-mode .curiosidad-card:hover {
+  box-shadow: 0 0 25px #ff003c, 0 0 50px #ff003c;
+}
+
+.timeline-section {
+  padding: 4rem 2rem;
+  position: relative;
+  z-index: 1;
+}
+
+.timeline {
+  position: relative;
+  border-left: 4px solid #00ffff;
+  padding-left: 2rem;
+  margin: 0 auto;
+  max-width: 800px;
+}
+
+body.villain-mode .timeline {
+  border-left-color: #ff003c;
+}
+
+.timeline-item {
+  position: relative;
+  padding-left: 40px;
+  margin-bottom: 40px;
+  border-left: 4px solid var(--pulse-color);
+}
+
+
+.timeline-year {
+  font-weight: bold;
+  margin-bottom: 5px;
+  color: var(--pulse-color);
+}
+
+.timeline-content h5 {
+  margin-bottom: 8px;
+  font-size: 1.2rem;
+  color: var(--text-primary);
+}
+
+.timeline-content p {
+  color: var(--text-secondary);
+  margin-bottom: 0;
+}
+
+/* Colores por tema */
+body {
+  --pulse-color: #00ffff; /* Tron azul */
+  --text-primary: #ffffff;
+  --text-secondary: #bbbbbb;
+}
+
+body.villain-mode {
+  --pulse-color: #ff003c; /* Villano rojo */
+  --text-primary: #ffb4c8;
+  --text-secondary: #ffcad7;
+}
+
+
+
+@keyframes fadeInUp {
+  from {
+    transform: translateY(20px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+.tron-quotes {
+  background: rgba(0, 0, 0, 0.3);
+  border-radius: 15px;
+  padding: 2rem;
+  margin: 3rem auto;
+  width: 90%;
+  max-width: 900px;
+  box-shadow: 0 0 20px rgba(0, 255, 255, 0.2);
+}
+
+.quote-box {
+  margin-bottom: 2rem;
+  padding: 1.5rem;
+  border-left: 4px solid var(--tron-color);
+  animation: fadeInUp 1s ease-in-out;
+  background-color: rgba(0, 0, 0, 0.2);
+}
+
+.quote-text {
+  font-size: 1.5rem;
+  color: var(--tron-color);
+  font-family: 'Orbitron', sans-serif;
+  text-shadow: 0 0 8px var(--tron-color);
+  margin-bottom: 0.5rem;
+}
+
+.quote-author {
+  font-size: 1rem;
+  color: #aaa;
+  font-family: 'Orbitron', sans-serif;
+}
+
+/* Pulsación dinámica en modo activo */
+body.tron-mode .quote-text {
+  animation: tronPulse 2s infinite;
+}
+
+body.villain-mode .quote-text {
+  color: #ff003c;
+  text-shadow: 0 0 8px #ff003c;
+  animation: pulseRed 2s infinite;
+}
+
+/* Animaciones */
+@keyframes tronPulse {
+  0%, 100% {
+    text-shadow: 0 0 5px #00f0ff, 0 0 15px #00f0ff;
+  }
+  50% {
+    text-shadow: 0 0 20px #00f0ff, 0 0 30px #00f0ff;
+  }
+}
+
+@keyframes pulseRed {
+  0%, 100% {
+    text-shadow: 0 0 5px #ff003c, 0 0 15px #ff003c;
+  }
+  50% {
+    text-shadow: 0 0 20px #ff003c, 0 0 30px #ff003c;
+  }
+}
+
+iframe {
+  border: 2px solid var(--color-neon);
+  box-shadow: 0 0 20px var(--color-neon);
+  border-radius: 10px;
+}
+
+.enlace-box {
+  padding: 1rem;
+  background: rgba(255, 255, 255, 0.03);
+  border-radius: 12px;
+  margin-bottom: 2rem;
+}
+
+
