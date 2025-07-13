@@ -51,7 +51,7 @@ window.addEventListener('DOMContentLoaded', () => {
     document.body.classList.add('tron-mode'); // ← Establece modo Tron por defecto
   }
 
-  activarBrilloTron(); // ← Asegúrate de activar el brillo al cargar
+  activarBrilloTron(); // ← Asegúra activar el brillo al cargar
   aplicarEstilosVillano(); // ← Aplica clases a los textos según el modo
 });
 
@@ -142,7 +142,7 @@ window.addEventListener('DOMContentLoaded', () => {
     document.body.classList.add('tron-mode');
   }
 
-  aplicarEstilosVillano(); // ← si tienes esto para cambiar textos u otros estilos
-  activarBrilloTron();      // ← si tienes efectos como el brillo en secciones
+  aplicarEstilosVillano(); 
+  activarBrilloTron();      
 });
 
