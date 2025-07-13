@@ -1,5 +1,48 @@
 @import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Rajdhani:wght@300;400;600;700&display=swap'); 
 
+/* MODO OSCURO (por defecto) */
+body {
+  font-family: 'Orbitron', sans-serif;
+  background-color: #0a0a0a;
+  color: #f8f9fa;
+  padding-top: 70px; /* <-- aquí el espaciado para que no se pegue al navbar */
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.neon-text {
+  color: #00f7ff;
+  text-shadow: 0 0 5px #00f7ff, 0 0 10px #00f7ff, 0 0 20px #00f7ff;
+}
+
+a {
+  text-decoration: none;
+  color: #f8f9fa;
+}
+
+a:hover {
+  color: #00f7ff;
+  text-shadow: 0 0 5px #00f7ff;
+}
+
+.btn-info {
+  background-color: #00f7ff;
+  border: none;
+  color: #000;
+  font-weight: bold;
+  box-shadow: 0 0 10px #00f7ff;
+  transition: transform 0.2s ease;
+}
+
+.btn-info:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 15px #00f7ff;
+}
+
+.card {
+  background-color: #121212;
+  border: 1px solid #00f7ff;
+  transition: background-color 0.3s, border-color 0.3s;
+}
 
 .card:hover {
   background-color: #1a1a1a;
@@ -15,6 +58,52 @@
   background-color: #00f7ff;
   color: #000;
   box-shadow: 0 0 10px #00f7ff;
+}
+
+/* MODO CLARO */
+body.light-mode {
+  background-color: #f4f4f4;
+  color: #222;
+}
+
+body.light-mode .neon-text {
+  color: #005577;
+  text-shadow: none;
+}
+
+body.light-mode a {
+  color: #222;
+}
+
+body.light-mode a:hover {
+  text-shadow: none;
+  color: #0077aa;
+}
+
+body.light-mode .card {
+  background-color: #ffffff;
+  border-color: #00aaff;
+}
+
+body.light-mode .card:hover {
+  background-color: #eaeaea;
+  border-color: #0077aa;
+}
+
+body.light-mode .btn-info {
+  background-color: #00aaff;
+  color: #fff;
+}
+
+body.light-mode .btn-outline-info {
+  border-color: #00aaff;
+  color: #00aaff;
+}
+
+body.light-mode .btn-outline-info:hover {
+  background-color: #00aaff;
+  color: #fff;
+  box-shadow: 0 0 10px #00aaff;
 }
 
 /* TRANSICIONES GLOBALES */
